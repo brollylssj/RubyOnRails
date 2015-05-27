@@ -1,0 +1,25 @@
+<center><h1>Listing articles</h1></center>
+
+<h1>Hello, Rails!</h1>
+<%= link_to 'My Blog', controller: 'articles' %>
+<hr>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+
+<ul>
+  <% @articles.each do |article| %>
+    <tr>
+      <td><%= article.title %></td>
+      <li><td><%= article.text %></td></li>
+    </tr>
+  <% end %>
+  </ul>
+</table>
+<center>
+<h1>Add new</h1>
+<%= link_to 'New article', new_article_path %>
+</center>
